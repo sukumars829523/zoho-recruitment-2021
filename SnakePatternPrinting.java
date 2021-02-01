@@ -11,7 +11,7 @@ public class SnakePatternPrinting {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter input N: ");
-		int n = 4;//sc.nextInt();
+		int n = sc.nextInt();
 		
 		printSnakePattern(n);
 		sc.close();
