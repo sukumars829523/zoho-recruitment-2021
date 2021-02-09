@@ -21,17 +21,19 @@ public class SnakePatternPrinting {
 		int pval = 1 ;
 		
 		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < 2*n-1; j++) {
-				
+			int j = 0 ;
 				for(;j < n-i-1 ; j++)
 					System.out.print("_ ");
 				
-				for(; i%2 == 0 &&  j < n-i-1+n;j++)
+				for(; i%2 == 0 &&  j < 2*n-i-1;j++)
 					System.out.print(pval++ +" ");
 				
-				for(; i%2 == 1 &&  j < n-i-1+n;j++)
+				for(; i%2 == 1 &&  j < 2*n-i-1;j++)
 					System.out.print(--pval + " ");
-			}
+				for (; j < 2*n-1; j++) 
+					System.out.print("_ " );
+				
+				
 			pval+=n;
 			System.out.println();
 		}
